@@ -1,7 +1,7 @@
 {
-  "name": "bolt-js-starter-template",
+  "name": "eager-lamb-925",
   "version": "1.0.0",
-  "description": "A scaffold template for Slack apps",
+  "description": "Useless fact bot",
   "main": "app.js",
   "scripts": {
     "dev": "node --env-file='.env' app.js"
@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/slack-samples/bolt-js-starter-template.git"
+    "url": "https://github.com/st-artichokey/eager-lamb"
   },
   "bugs": {
-    "url": "https://github.com/slack-samples/bolt-js-starter-template/issues"
+    "url": "https://github.com/st-artichokey/eager-lamb/issues"
   },
   "dependencies": {
     "@slack/bolt": "^4.4.0",

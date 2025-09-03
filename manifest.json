@@ -50,7 +50,8 @@
         "useless_fact_step": {
             "title": "Useless Fact Custom Step",
             "description": "Runs useless fact step",
-            "input_parameters": {
+            "input_parameters": {},
+            "output_parameters": {
                 "message": {
                     "type": "string",
                     "title": "fact",
