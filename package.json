@@ -4,10 +4,9 @@
   "description": "A scaffold template for Slack apps",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "lint": "npx @biomejs/biome check *.js listeners",
-    "lint:fix": "npx @biomejs/biome check --write *.js listeners"
+    "dev": "node --env-file='.env' app.js"
   },
+  "type": "module",
   "author": "Slack Technologies, LLC",
   "license": "MIT",
   "keywords": [
