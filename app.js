@@ -1,6 +1,10 @@
+import bolt from "@slack/bolt"
+import axios from "axios";
+
 const { App, LogLevel } = require('@slack/bolt');
 const { config } = require('dotenv');
 const { registerListeners } = require('./listeners');
+const { App } = bolt
 
 config();
 
@@ -10,6 +14,7 @@ const app = new App({
   socketMode: true,
   appToken: process.env.SLACK_APP_TOKEN,
   logLevel: LogLevel.DEBUG,
+  signingSecret: process.env.SLACK_SIGNING_SECRET
 });
 
 /** Register Listeners */
@@ -24,3 +29,10 @@ registerListeners(app);
     app.logger.error('Failed to start the app', error);
   }
 })();
+
+// Make an API call to retrieve a random fact from usefless facts
+async function getUselessFact() {
+  const res = await axios.get("https://uselessfacts.jsph.pl/api/v2/facts/random");
+  return (res.status === 200)? res.data : null;
+  
+}
